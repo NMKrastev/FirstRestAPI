@@ -17,5 +17,15 @@ pipeline {
                 sh './mvnw package'
             }
         }
+        stage ('Package') {
+            steps {
+                sh './mvnw install'
+            }
+        }
+        stage ('Package') {
+            steps {
+                sh './mvnw deploy'
+            }
+        }
     }
 }

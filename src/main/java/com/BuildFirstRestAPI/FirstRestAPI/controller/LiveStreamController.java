@@ -2,6 +2,7 @@ package com.BuildFirstRestAPI.FirstRestAPI.controller;
 
 import com.BuildFirstRestAPI.FirstRestAPI.model.LiveStream;
 import com.BuildFirstRestAPI.FirstRestAPI.repository.LiveStreamRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +27,12 @@ public class LiveStreamController {
     @GetMapping("/{id}")
     public LiveStream findById(@PathVariable String id) {
         return repository.findById(id);
+    }
+
+    // POST http://localhost:8090/streams
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping
+    public LiveStream create(@RequestBody LiveStream stream) {
+        return repository.create(stream);
     }
 }

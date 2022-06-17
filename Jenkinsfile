@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './mvn clean'
-                sh './mvn validate'
-                sh './mvn compile'
+                sh './mvnw clean'
+                sh './mvnw validate'
+                sh './mvnw compile'
             }
         }
     }

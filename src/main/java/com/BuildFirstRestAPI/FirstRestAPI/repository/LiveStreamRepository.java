@@ -1,12 +1,15 @@
 package com.BuildFirstRestAPI.FirstRestAPI.repository;
 
 import com.BuildFirstRestAPI.FirstRestAPI.model.LiveStream;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Repository
 public class LiveStreamRepository {
 
     List<LiveStream> streams = new ArrayList<>();

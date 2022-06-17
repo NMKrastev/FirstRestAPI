@@ -35,4 +35,17 @@ public class LiveStreamController {
     public LiveStream create(@RequestBody LiveStream stream) {
         return repository.create(stream);
     }
+
+    // PUT http://localhost:8090/streams/1242-2352-234234-234234
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    public void update(@RequestBody LiveStream stream, @PathVariable String id) {
+        repository.update(stream, id);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete (@PathVariable String id) {
+        repository.delete(id);
+    }
 }

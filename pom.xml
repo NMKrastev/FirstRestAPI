@@ -18,6 +18,14 @@
 		<java.version>18</java.version>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>api1</id>
+			<name>FirstRestAPI</name>
+			<url>C:\Users\n.krastev\Documents\GitHub\FirstRestAPI\deploy</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -11,21 +11,31 @@ pipeline {
             steps {
                 sh './mvnw test'
             }
+            post {
+                always {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                }
+            }
         }
-        stage ('Package') {
+        stage ('Publish') {
             steps {
                 sh './mvnw package'
             }
+            post {
+                success {
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
         }
-        stage ('Package') {
+        /* stage ('Install') {
             steps {
                 sh './mvnw install'
             }
         }
-        stage ('Package') {
+        stage ('Deploy') {
             steps {
                 sh './mvnw deploy'
             }
-        }
+        } */
     }
 }

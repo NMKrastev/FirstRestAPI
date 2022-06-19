@@ -22,7 +22,7 @@
 		<repository>
 			<id>api1</id>
 			<name>FirstRestAPI</name>
-			<url>C:\Users\n.krastev\Documents\GitHub\FirstRestAPI\deploy</url>
+			<url>http://172.20.10.10/repo</url>
 		</repository>
 	</distributionManagement>-->
 

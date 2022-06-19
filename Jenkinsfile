@@ -27,12 +27,12 @@ pipeline {
                 }
             }
         }
-        /* stage ('Install') {
+        stage ('Install') {
             steps {
                 sh './mvnw install'
             }
         }
-        stage ('Deploy') {
+        /* stage ('Deploy') {
             steps {
                 sh './mvnw deploy'
             }
